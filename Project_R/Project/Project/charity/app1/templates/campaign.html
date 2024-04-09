@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>ASHTHA CHARITABLE TRUST</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static './css/campaign.css' %}">
+    </head>
+    <body>
+         
+        <div class="container" align="left">
+            <div class="input">
+                <form  method="POST">
+                {% csrf_token%}
+                <p><b>User Name</b></p>
+                <input type="text" name="uname" id="uname" placeholder="enter username" required>
+                <p><b>Email</b></p>
+                <input type="text" placeholder="enter your email" name="email" required>
+            </div><br>
+            <p><b>Select campaign type</b><br><br>
+            <div class="time">
+                <input type="radio" name="category" value="1">cancer awareness campaign<br>
+                <input type="radio" name="category" value="2">fundraise campaign<br>
+                <input type="radio" name="category" value="3">pulse polio campaign<br>
+                <input type="radio" name="category" value="4">annual health care campaign<br>
+            </div><br>
+            <button>Join Now</button>
+        </div>
+        
+
+        <script src="" async defer></script>
+    </body>
+</html>

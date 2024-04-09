@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static './css/registration.css' %}">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form  method="POST">
+        {% csrf_token%}
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details"><b>Full Name</b></span>
+            <input type="text" placeholder="Enter your name" required name="fullname">
+          </div>
+          <div class="input-box">
+            <span class="details"><b>Username</b></span>
+            <input type="text" placeholder="Enter your username" required name="username">
+          </div>
+          <div class="input-box">
+            <span class="details"><b>Email</b></span>
+            <input type="text" placeholder="Enter your email" required name="email" >
+          </div>
+          <div class="input-box">
+            <span class="details"><b>Phone Number</b></span>
+            <input type="text" placeholder="Enter your number" required name="phonenumber" pattern="[789][0-9]{9}">
+          </div>
+          <div class="input-box">
+            <span class="details"><b>Password</b></span>
+            <input type="password" placeholder="Enter your password" required name="password" minlength="8" >
+          </div>
+        <div class="button">
+          <input type="submit" value="Register">
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
